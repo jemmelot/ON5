@@ -42,7 +42,7 @@ body {
 }
 
 #link {	
-	font-style: italic;
+	font-weight: bold;
 	font-size: 30px;
 	background: none;
 	border:none;

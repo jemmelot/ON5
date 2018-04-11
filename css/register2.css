@@ -43,8 +43,8 @@ body {
 }
 
 #link {	
-	font-style: italic;
 	font-size: 30px;
+	font-weight: bold;
 	background: none;
 	border:none;
 	color: red;

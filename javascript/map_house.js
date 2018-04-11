@@ -146,7 +146,6 @@ var sliderTwo = d3.slider().axis(d3.svg.axis().ticks(10)).min(15).max(60).step(1
 		
 		for (var i = 0; i < polygons[0].length; i++) {
 			if (polygons[0][i].id.includes("Regel")) {
-				console.log(polygons[0][i])
 				for (var j = 0; j < polygons[0][i].children.length; j++) {
 					polygons[0][i].children[j].style.opacity = "0.5"
 					polygons[0][i].children[j].style.fill = "#939393"
@@ -188,6 +187,15 @@ $("input[type=radio]").change(function() {
 				};				
 			}	
 		};
+		
+		for (var i = 0; i < polygons[0].length; i++) {
+			if (polygons[0][i].id.includes("Regel")) {
+				for (var j = 0; j < polygons[0][i].children.length; j++) {
+					polygons[0][i].children[j].style.opacity = "0.5"
+					polygons[0][i].children[j].style.fill = "#939393"
+				};
+			};
+		};	
 	};
 	
 	if (type == "appartement") {
@@ -204,23 +212,7 @@ $("input[type=radio]").change(function() {
 			}	
 		};
 	};
-	
-	// call the sliders to display them on the page
-	d3.select("#legend").append("text")
-		.attr("class", "sliderOne")
-		.attr("x", 10)
-		.attr("y", 466)
-		.text("Oppervlakte:")
-		.style("font-size", "20px")
-		.style("font-weight", "bold");
-	
-	d3.select("#legend").append("text")
-		.attr("class", "sliderOne")
-		.attr("x", 200)
-		.attr("y", 466)
-		.text("m2")
-		.style("font-size", "20px")
-		
+			
 	d3.select("#legend").append("text")
 		.attr("class", "sliderTwo")
 		.attr("x", 10)
@@ -238,9 +230,7 @@ $("input[type=radio]").change(function() {
 	
 	if (clickStatus == 0) {	
 		d3.select("#slider-hoogte").call(sliderTwo);	
-		d3.select("#slider-oppervlakte").call(sliderOne);	
 		d3.select("#slider-two-title")[0][0].style.visibility = "visible"		
-		d3.select("#slider-one-title")[0][0].style.visibility = "visible"
 		document.getElementById("slider-one").value = 60;		
 	};
 	
@@ -257,7 +247,7 @@ $("input[type=radio]").change(function() {
 	};
 	
 	// register the first click so that sliders don't get duplicated
-	clickStatus = 1;
+	clickStatus++;
 });
 
 // log input	
@@ -343,6 +333,30 @@ var polygons = d3.selectAll("g")
 		// if clicked in available area, show options
 		if (type == "grondgebonden") {
 			if (this.id == "Grondgebonden") {
+				if (clickStatus == 1) {
+					// call the sliders to display them on the page
+					d3.select("#legend").append("text")
+						.attr("class", "sliderOne")
+						.attr("x", 10)
+						.attr("y", 466)
+						.text("Oppervlakte:")
+						.style("font-size", "20px")
+						.style("font-weight", "bold");
+					
+					d3.select("#legend").append("text")
+						.attr("class", "sliderOne")
+						.attr("x", 200)
+						.attr("y", 466)
+						.text("m2")
+						.style("font-size", "20px")
+					
+					d3.select("#slider-oppervlakte").call(sliderOne);
+					d3.select("#slider-one-title")[0][0].style.visibility = "visible"
+					
+					clickStatus = 2;
+					console.log(clickStatus);
+				};
+				
 				var coords = d3.mouse(this);
 						
 				var newData = {
@@ -367,38 +381,63 @@ var polygons = d3.selectAll("g")
 		};
 		if (type == "appartement") {
 			if (this.id.includes("Regel")) {
-				var coords = d3.mouse(this);
+				if (this.children[0].style.fill == "rgb(233, 133, 50)") {
+					if (clickStatus == 1) {
+						// call the sliders to display them on the page
+						d3.select("#legend").append("text")
+							.attr("class", "sliderOne")
+							.attr("x", 10)
+							.attr("y", 466)
+							.text("Oppervlakte:")
+							.style("font-size", "20px")
+							.style("font-weight", "bold");
 						
-				var newData = {
-					x: Math.round(coords[0]),  // Takes the pixel number to convert to number
-					y: Math.round(coords[1])
-				};
-				
-				circleData = [];
-				d3.selectAll(".mouseDot").remove();
-				circleData.push(newData);
-				
-				map.selectAll("circle")
-					.data(circleData)
-					.enter()
-					.append("circle")
-					.attr("class", "mouseDot")
-					.attr("cx", function(d){ return d.x; })
-					.attr("cy", function(d){ return d.y; })
-					.attr("r", 10)
-					.style("fill", "red")
+						d3.select("#legend").append("text")
+							.attr("class", "sliderOne")
+							.attr("x", 200)
+							.attr("y", 466)
+							.text("m2")
+							.style("font-size", "20px")
+						
+						d3.select("#slider-oppervlakte").call(sliderOne);
+						d3.select("#slider-one-title")[0][0].style.visibility = "visible"
+						
+						clickStatus = 2;
+					};
+									
+					var coords = d3.mouse(this);
+							
+					var newData = {
+						x: Math.round(coords[0]),  // Takes the pixel number to convert to number
+						y: Math.round(coords[1])
+					};
+					
+					circleData = [];
+					d3.selectAll(".mouseDot").remove();
+					circleData.push(newData);
+					
+					map.selectAll("circle")
+						.data(circleData)
+						.enter()
+						.append("circle")
+						.attr("class", "mouseDot")
+						.attr("cx", function(d){ return d.x; })
+						.attr("cy", function(d){ return d.y; })
+						.attr("r", 10)
+						.style("fill", "red")
 
-				//console.log(parseInt(this.id[(this.id.length - 1)]));
-				
-				var rule = rules[parseInt(this.id[(this.id.length - 1)])]
-				
-				$("#bouwregels")[0].dataset.content = ""
-				
-				Object.keys(rule).forEach(function(key,index) {
-					$("#bouwregels")[0].dataset.content += key + ": " + rule[key] + "<br>";
-				});				
-								
-				$("#bouwregels")[0].style.visibility = "visible"
+					//console.log(parseInt(this.id[(this.id.length - 1)]));
+					
+					var rule = rules[parseInt(this.id[(this.id.length - 1)])]
+					
+					$("#bouwregels")[0].dataset.content = ""
+					
+					Object.keys(rule).forEach(function(key,index) {
+						$("#bouwregels")[0].dataset.content += key + ": " + rule[key] + "<br>";
+					});				
+									
+					$("#bouwregels")[0].style.visibility = "visible"
+				}
 			};
 		};		
 	});

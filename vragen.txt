@@ -1,0 +1,5 @@
+- wonen/bedrijf/voorziening
+    |
+    ----> particulier/corporatie
+	       |
+	       ----> één type, meerdere types
