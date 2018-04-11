@@ -17,6 +17,9 @@
 		<script src="https://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+		<script>
+			$("body").fadeIn(150);
+		</script>
 				
 		<div class="vraag">
 			<strong>VRAAG 1</strong>
@@ -29,11 +32,11 @@
 		</div>
 		
 		<div class="icons">
-			<a href="vraag2.html" ><img border="0" src="../plaatjes/huis.png" width="120" height="120"></a>
+			<img class="link1" border="0" src="../plaatjes/huis.png" width="120" height="120">
 			<span style="color:#F1A2B0">_____________<span>
-			<a href="vraag2.html" onclick="logOne('bedrijven')"><img border="0" src="../plaatjes/bedrijf.png" width="120" height="120"></a>
+			<img class="link1" border="0" src="../plaatjes/bedrijf.png" width="120" height="120">
 			<span style="color:#F1A2B0">_____________<span>
-			<a href="vraag2.html" onclick="logOne('voorzieningen')"><img border="0" src="../plaatjes/voorziening.png" width="120" height="120"></a>
+			<img class="link1" border="0" src="../plaatjes/voorziening.png" width="120" height="120">
 		</div>
 		
 		<div class="icons-tags">
@@ -47,4 +50,5 @@
 		<a href="home.html" type="button" id="home" class="btn btn-default btn-sm" style="padding: 0; border: none; background: none;">
 			<span class="glyphicon glyphicon-home"></span> Home
         </a>
+		<script src="../javascript/transition.js"></script>
 	</body>
