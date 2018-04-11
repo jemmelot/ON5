@@ -160,7 +160,9 @@ var sliderTwo = d3.slider().axis(d3.svg.axis().ticks(10)).min(15).max(60).step(1
 						if (polygons[0][i].id.replace("Regel_", "") == (String(rule))) {
 							for (var j = 0; j < polygons[0][i].children.length; j++) {
 								polygons[0][i].children[j].style.opacity = "1"
-								polygons[0][i].children[j].style.fill = "#E98532"
+								polygons[0][i].style.opacity = "1"
+								polygons[0][i].style.fill = "#E98532";
+								polygons[0][i].children[j].style.fill = "#E98532";
 							};
 						};
 					}
@@ -182,7 +184,9 @@ $("input[type=radio]").change(function() {
 				for (var j = 0; j < polygons[0][i].children.length; j++) {
 					for (k = 0; k < polygons[0][i].children[j].children.length; k++) {
 						polygons[0][i].children[j].children[k].style.opacity = 1
+						polygons[0][i].style.opacity = 1
 						polygons[0][i].children[j].children[k].style.fill = "#E98532"
+						polygons[0][i].style.fill = "#E98532"
 					};
 				};				
 			}	
@@ -285,7 +289,7 @@ var polygons = d3.selectAll("g")
 			.attr("y", 180)
 			.attr("width", 20)
 			.attr("height", 20)
-			.style("fill", this.children[0].style.fill)
+			.style("fill", this.style.fill)
 		
 		d3.select(".legendText").remove();
 		
@@ -295,14 +299,14 @@ var polygons = d3.selectAll("g")
 			.attr("id", this.id)
 			.attr("x", 40)
 			.attr("y", 195)
-			.text(this.id)
-			.style("font-size", "17px")
-			.on('mouseover', function () {
-				polygons[i].style.opacity = 0.1;
+			.text(function() {
+				if (this.id.includes("Regel")) {
+					return (this.id.replace("Regel_", "gebied "))
+				} else {
+					return (this.id)
+				};
 			})
-			.on('mouseout', function () {
-				polygons[i].style.opacity = 1;
-			})
+			.style("font-size", "17px")			
 	})
 	.on('mouseout', function () {
 		this.style.opacity = 1;
@@ -353,8 +357,7 @@ var polygons = d3.selectAll("g")
 					d3.select("#slider-oppervlakte").call(sliderOne);
 					d3.select("#slider-one-title")[0][0].style.visibility = "visible"
 					
-					clickStatus = 2;
-					console.log(clickStatus);
+					clickStatus = 2;					
 				};
 				
 				var coords = d3.mouse(this);
