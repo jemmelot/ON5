@@ -1,0 +1,80 @@
+body {
+	background-color: #5DAFD4;
+	font-family: "Nexa";
+	color: white;
+}
+
+.title {
+	position: absolute;
+	text-align: center;
+	top: 150px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	
+	margin: auto;
+	
+	font-size: 80px;
+}
+
+.description {
+	position: absolute;
+	text-align: center;
+	font-size: 22px;
+	top: 260px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	
+	margin: auto;
+}
+
+.icons {
+	position: absolute;
+	text-align: center;
+	top: 325px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	
+	margin: auto;
+}
+
+.icons-tags {
+	position: absolute;
+	text-align: center;
+	font-size: 20px;
+	top: 485px;
+	bottom: 0px;
+	right: 300px;
+	
+	margin: auto;
+}
+
+#m {
+	position: relative;
+	right: 110px;
+	font-size: 20px;
+}
+
+#laag-een {
+	position: relative;
+	font-size: 20px;
+	left: 100px;
+	bottom: 30px;
+}
+
+#laag-twee {
+	position: relative;
+	font-size: 20px;
+	left: 85px;
+	top: 40px;
+}
+
+#home {
+	position: absolute;
+	font-size: 20px;
+	color: white;
+	top: 15px;
+	right: 15px;
+}

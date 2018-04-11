@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!-- Jesse Emmelot, 4386744 -->
+
+	<head>
+		<!-- include stylesheets -->
+		<meta charset="UTF-8">
+		<title> ON5 kaart </title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<style>
+			@import url('../css/register2.css');
+		</style>
+	</head>
+	
+	<body>
+		<!-- include external libraries and API's -->
+		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+		<script src="https://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+		<div id="title">
+			<strong>PIT!</strong>
+		</div>
+
+		<form id="register">
+			<div class="form-group">
+				<label for="usr">Naam:</label>
+				<input type="text" class="form-control" id="usr">
+			</div>
+			
+			<div class="form-group">
+				<label for="pwd">Wachtwoord:</label>
+				<input type="password" class="form-control" id="pwd">
+			</div>
+			
+			<div class="form-group">
+				<label for="pwd">Wachtwoord bevestigen:</label>
+				<input type="password" class="form-control" id="pwd2">
+			</div>
+		</form>
+		
+		<div id="button-wrapper">
+			<a href="vraag1.html" id="link">Registreer</a>
+		</div>
+		
+		<!-- javascript files -->
+		<script>
+			var input = document.getElementById("usr");
+			
+			input.addEventListener("keyup", function(event) {
+				event.preventDefault();
+				
+				if (event.keyCode === 13) {
+					document.getElementById("link").click();
+				}
+			});
+			
+			var input = document.getElementById("pwd");
+			
+			input.addEventListener("keyup", function(event) {
+				event.preventDefault();
+				
+				if (event.keyCode === 13) {
+					document.getElementById("link").click();
+				}
+			});
+			
+			var input = document.getElementById("pwd2");
+			
+			input.addEventListener("keyup", function(event) {
+				event.preventDefault();
+				
+				if (event.keyCode === 13) {
+					document.getElementById("link").click();
+				}
+			});
+		</script>
+	</body>

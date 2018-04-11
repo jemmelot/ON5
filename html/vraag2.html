@@ -1,0 +1,48 @@
+<html lang="en">
+	<!-- Jesse Emmelot, 4386744 -->
+
+	<head>
+		<!-- include stylesheets -->
+		<meta charset="UTF-8">
+		<title> ON5 kaart </title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<style>
+			@import url('../css/vraag2.css');
+		</style>
+	</head>
+	
+	<body>
+		<!-- include external libraries and API's -->
+		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+		<script src="https://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		
+		<div class="vraag">
+			<strong>VRAAG 2</strong>
+		</div>
+		
+		<div class="description">
+			<span>
+				Ontwikkelt u als corporatie of particulier?
+			</span>
+		</div>
+		
+		<div class="icons">
+			<a href="vraag3.html" onclick="logTwo('particulier')"><img border="0" src="../plaatjes/huis.png" width="120" height="120"></a>
+			<span style="color:#F1A2B0">_____________<span>			
+			<a href="vraag3.html" onclick="logTwo('corporatie')"><img border="0" src="../plaatjes/corporatie.png" width="150" height="150"></a>
+		</div>
+		
+		<div class="icons-tags">
+			<span style="color: black">particulier</span>
+			<span style="color:#F1A2B0">____..________<span>
+			<span style="color:black">corporatie</span>			
+		</div>
+		
+		<a href="home.html" type="button" id="home" class="btn btn-default btn-sm" style="padding: 0; border: none; background: none;">
+			<span class="glyphicon glyphicon-home"></span> Home
+        </a>
+		
+		<!-- javascript files -->
+		<script src="../javascript/responses.js"></script>
+	</body>

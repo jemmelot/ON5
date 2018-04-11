@@ -1,0 +1,167 @@
+/* style attributes for the tooltip */
+.d3-tip {
+	line-height: 1;
+	padding: 10px;
+	background: rgba(0, 0, 0, 0.8);
+	color: #fff;
+	border-radius: 4px;
+	font-size: 12px;
+}
+
+/* style attributes for the tooltip */
+.d3-tip:after {
+	box-sizing: border-box;
+	display: inline;
+	font-size: 10px;
+	width: 100%;
+	line-height: 1;
+	color: rgba(0, 0, 0, 0.8);
+	content: "\25BC";
+	position: absolute;
+	text-align: center;
+}
+
+/* style attributes for the tooltip */
+.d3-tip.n:after {
+	margin: -1px 0 0 0;
+	top: 100%;
+	left: 0;
+}
+
+@font-face {
+	font-family: "Nexa";
+	color: white;
+	scr:url("Nexa_Light.otf");
+}
+
+@font-face {
+	font-family: "Nexa";
+	font-weight: bold;
+	color: white;
+	scr:url("Nexa_Bold.otf");
+}
+
+body {
+	background-color: #5A6386;
+	font-family: "Nexa";
+}
+
+#map-container {
+	position: absolute;
+	top: 80px;
+	left: 20px;
+}
+
+#title {
+	position: absolute;
+	top: 10px;
+	left: 20px;
+	color: white;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.legend {
+	position: absolute;
+	top: 80px;
+	right: 20px;
+}
+
+#legend-title {
+	color: white;
+	position: absolute;
+	top: 10px;
+	right: 180px;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+#home {
+	position: absolute;
+	padding: 0;
+	border: none;
+	background: none;
+	color: white;
+	font-size: 20px;
+	top: 30px;
+	right: 500px;	
+}
+
+#info {
+	position: absolute;
+	padding: 0;
+	border: none;
+	background: none;
+	color: white;
+	font-size: 20px;
+	top: 30px;
+	right: 420px;	
+}
+
+#bouwregels {
+	position: absolute;
+	width: 290px;
+	padding: 0;
+	border: 1px solid black;
+	font-size: 18px;
+	font-weight: bold;
+	bottom: 75px;
+	left: 0px;
+	right: 0px;
+
+	margin: auto;
+}
+
+.wrapper {
+	position: absolute;
+	width: 280px;
+	left: 20px;
+	bottom: 240px;
+}
+
+#slider-oppervlakte {
+	top: 90px;
+}
+
+#slider-one-title {
+	position: absolute;
+	font-size: 10px;
+	bottom: 156px;
+	left: 140px;
+	width: 50px;
+}
+
+#slider-two-title  {
+	position: absolute;
+	font-size: 10px;
+	bottom: 258px;
+	left: 90px;
+	width: 50px;
+}
+
+#link {	
+	position: absolute;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	bottom: 10px;
+	left: 54px;
+	background: none;
+	border:none;
+	color: red;
+}
+
+.d3-slider-axis-bottom {
+	width: 350px;
+}
+
+#radios {
+	position: absolute;
+	top: 220px;
+	left: 10px;
+	font-size: 18px;
+}
+
+.popover {
+	max-width: 320px;
+}

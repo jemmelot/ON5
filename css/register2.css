@@ -1,0 +1,55 @@
+body {
+	background-color: #5DAFD4;
+	font-family: "Nexa";
+}
+
+#title {
+	position: absolute;
+	text-align: center;
+	font-size: 100px;
+	color: white;
+	top: 150px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	
+	margin: auto;
+}
+
+#register {
+	position: absolute;
+	text-align: left;
+	color: white;
+	font-size: 16px;
+	width: 300px;
+	top: 300px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	
+	margin: auto;
+}
+
+#button-wrapper {
+	position: absolute;
+	text-align: center;
+	font-size: 18px;
+	top: 550px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	
+	margin: auto;	
+}
+
+#link {	
+	font-style: italic;
+	font-size: 30px;
+	background: none;
+	border:none;
+	color: red;
+}
+
+.form-control {
+	text-align: center;
+}

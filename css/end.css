@@ -1,0 +1,26 @@
+body {
+	background-color: #5DAFD4;
+	font-family: "Nexa";
+	color: white;
+}
+
+.title {
+	position: absolute;
+	text-align: center;
+	top: 240px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	
+	margin: auto;
+	
+	font-size: 150px;
+}
+
+#home {
+	position: absolute;
+	font-size: 20px;
+	color: white;
+	top: 15px;
+	right: 15px;
+}
