@@ -495,5 +495,7 @@ $(function() {
 	});
 
 	// zoom out
-	panZoomInstance.zoom(1)	
+	panZoomInstance.zoom(0.6)
+	panZoomInstance.pan({x: 0, y: 2})
+	
 })

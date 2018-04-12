@@ -18,14 +18,14 @@ body {
 .title {
 	position: absolute;
 	text-align: center;
-	top: 240px;
+	top: 200px;
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
 	
 	margin: auto;
 	
-	font-size: 150px;
+	font-size: 80px;
 }
 
 #home {
