@@ -1,20 +1,20 @@
 body {
 	display: none;
-	background-color: #F1A2B0;
+	background-color: #BEDFEE;
 	font-family: "Nexa";
 }
 
 .vraag {
 	position: absolute;
 	text-align: center;
-	top: 150px;
+	top: 120px;
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
 	
 	margin: auto;
 	
-	font-size: 80px;
+	font-size: 60px;
 }
 
 .description {
@@ -32,7 +32,7 @@ body {
 .icons {
 	position: absolute;
 	text-align: center;
-	top: 340px;
+	top: 330px;
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
@@ -43,8 +43,8 @@ body {
 .icons-tags {
 	position: absolute;
 	text-align: center;
-	font-size: 20px;
-	top: 475px;
+	font-size: 26px;
+	top: 500px;
 	bottom: 0px;
 	left: 5px;
 	right: 0px;
@@ -57,4 +57,11 @@ body {
 	font-size: 20px;
 	top: 15px;
 	right: 15px;
+}
+
+#back {
+	position: absolute;
+	font-size: 20px;
+	top: 15px;
+	right: 120px;
 }

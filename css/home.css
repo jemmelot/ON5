@@ -1,14 +1,13 @@
 body {
-	background-color: #5DAFD4;
+	background-color: #BEDFEE;
 	font-family: "Nexa";
 }
 
 #title {
 	position: absolute;
 	text-align: center;
-	font-size: 100px;
-	color: white;
-	top: 150px;
+	font-size: 120px;
+	top: 120px;
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
@@ -19,9 +18,8 @@ body {
 .description {
 	position: absolute;
 	text-align: center;
-	font-size: 18px;
-	color: white;
-	top: 300px;
+	font-size: 40px;
+	top: 335px;
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
@@ -33,7 +31,7 @@ body {
 	position: absolute;
 	text-align: center;
 	font-size: 18px;
-	top: 550px;
+	top: 460px;
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
@@ -46,5 +44,5 @@ body {
 	font-size: 30px;
 	background: none;
 	border:none;
-	color: red;
+	color: #efa543;
 }

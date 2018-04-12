@@ -87,6 +87,14 @@ body {
 	right: 500px;	
 }
 
+#back {
+	position: absolute;
+	color: white;
+	font-size: 20px;
+	top: 30px;
+	right: 610px;
+}
+
 #info {
 	position: absolute;
 	padding: 0;
