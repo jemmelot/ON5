@@ -142,6 +142,8 @@ var sliderOne = d3.slider().axis(d3.svg.axis().ticks(5)).min(60).max(120).step(1
 	});
 var sliderTwo = d3.slider().axis(d3.svg.axis().ticks(10)).min(15).max(60).step(1)
 	.on("slide", function(evt, valueTwo) {
+		d3.selectAll(".mouseDot").remove();
+		
 		document.getElementById("slider-two").value = valueTwo;
 		
 		for (var i = 0; i < polygons[0].length; i++) {
