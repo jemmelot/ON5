@@ -1,3 +1,14 @@
+@font-face {
+	font-family: "Nexa";
+	scr:url("Nexa_Light.otf");
+}
+
+@font-face {
+	font-family: "Nexa";
+	font-weight: bold;
+	scr:url("Nexa_Bold.otf");
+}
+
 body {
 	font-family: "Nexa";
 }

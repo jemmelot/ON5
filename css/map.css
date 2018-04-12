@@ -30,15 +30,13 @@
 
 @font-face {
 	font-family: "Nexa";
-	color: white;
-	scr:url("Nexa Light.otf");
+	scr:url("Nexa_Light.otf");
 }
 
 @font-face {
 	font-family: "Nexa";
 	font-weight: bold;
-	color: white;
-	scr:url("Nexa Bold.otf");
+	scr:url("Nexa_Bold.otf");
 }
 
 body {
