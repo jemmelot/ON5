@@ -1,14 +1,14 @@
 @font-face {
-	font-family: "Nexa";
-	scr:url("Nexa_Light.otf");
+    font-family: 'Nexa';
+	src: url('Nexa_Bold.otf') format('opentype');     
 }
 
 @font-face {
-	font-family: "Nexa";
-	font-weight: bold;
-	scr:url("Nexa_Bold.otf");
+    font-family: 'Nexa';
+    font-weight: bold;
+	src: url('Nexa_Bold.otf') format('opentype');     
 }
-	
+
 .d3-slider {
     position: relative;
     font-size: 1.1em;
