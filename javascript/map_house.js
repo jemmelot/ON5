@@ -2,6 +2,9 @@
 	ON5 interactive map of M4H
 	
 	Jesse Emmelot, 2018
+	
+	Sources:
+		- d3.slider by Bjorn Sandvik
 */
 
 // activate popover functionality
